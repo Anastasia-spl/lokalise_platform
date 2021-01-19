@@ -113,23 +113,39 @@
 }
 
 .nav__mobile {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-	position: absolute;
-	z-index: 60;
-	top: $header-min-height;
-	left: 0;
-	right: 0;
+	&-overlay {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		position: fixed;
+		z-index: 60;
+		top: -100%;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background-color: rgba(0,0,0,0.35);
+	transition: all $cubic;
+
+		&.is-open {
+			opacity: 1;
+			pointer-events: all;
+			visibility: visible;
+		top: $header-min-height;
+
+			.nav__mobile {
+				transform: scale(1)
+			}
+		}
+	}
 	background-color: getColor(bg-accent);
 	text-align: center;
-	padding: 1rem 0;
-	&.is-open {
-		opacity: 1;
-		pointer-events: all;
-		visibility: visible;
-	}
+	padding: 2rem 0;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1), 0px 4px 4px rgba(0,0,0,0.08), 1px 4px 6px rgba(0,0,0,0.12);
+	transform: scale(0.8);
+	transition: all $cubic 100ms;
+
 }
+
 
 .nav__list {
 	@include flexbox();
@@ -141,10 +157,10 @@
 .nav__item {
 	margin-right: 42px;
 	@media screen and (max-width: 981px) {
-		margin-right: 28px;
+		margin-right: 27px;
 	}
-	@media screen and (max-width: 768px) {
-		margin: 7px 0;
+	@media screen and (max-width: 767px) {
+		margin: 0 0 7px 0;
 		&:last-child {
 			margin: 0;
 		}
@@ -176,12 +192,6 @@
 		height: 30px;
 		min-width: 60px;
 	}
-
-	&:hover,
-	&focus {
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-			0px 2px 2px rgba(0, 0, 0, 0.12);
-	}
 }
 
 .authorization .light_button {
@@ -196,5 +206,9 @@
 	}
 	@media (max-width: 767px) {
 		@include fontStyle(400, 2rem, 1.33, $primary-font);
+	}
+
+	&:hover, &:focus {
+		color: getColor(decorative-color)
 	}
 }

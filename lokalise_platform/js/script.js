@@ -218,10 +218,20 @@ function ibg() {
   for (var i = 0; i < ibg.length; i++) {
     if (ibg[i].querySelector('img')) {
       if (document.querySelector('body').classList.contains("no-webp")) {
-        ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+        if (window.devicePixelRatio === 2) {
+          ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('picture img').getAttribute('srcset').split(',')[1].split('.')[0] + ".png";
+        } else {
+          ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('picture img').getAttribute('src') + ')';
+        }
       } else {
-        var path = "" + ibg[i].querySelector('img').getAttribute('src').split('.')[0] + ".webp";
-        ibg[i].style.backgroundImage = 'url(' + path + ')';
+        if (window.devicePixelRatio === 2) {
+          var path = "" + ibg[i].querySelector('picture source').getAttribute('srcset').split(',')[1].split('.')[0] + ".webp";
+          ibg[i].style.backgroundImage = 'url(' + path + ')';
+        } else {
+          var _path = "" + ibg[i].querySelector('picture img').getAttribute('src').split('.')[0] + ".webp";
+
+          ibg[i].style.backgroundImage = 'url(' + _path + ')';
+        }
       }
     }
   }
@@ -239,10 +249,21 @@ document.body.style.paddingTop = "".concat(pageHeaderHeight, "px");
 (function () {
   var burgerBtnRef = document.querySelector('[data-burger-btn]');
   var mobileMenuRef = document.querySelector('[data-mobile-menu]');
-  burgerBtnRef.addEventListener("click", function () {
+  var body = document.querySelector('body');
+  burgerBtnRef.addEventListener("click", function (event) {
     var expanded = burgerBtnRef.getAttribute("aria-expanded") === "true" || false;
     burgerBtnRef.classList.toggle("is-open");
     burgerBtnRef.setAttribute("aria-expanded", !expanded);
     mobileMenuRef.classList.toggle("is-open");
+
+    if (mobileMenuRef.classList.contains("is-open")) {
+      body.style.overflow = 'hidden';
+    } else body.style.overflow = "auto";
+  });
+  mobileMenuRef.addEventListener('click', function (event) {
+    if (event.target.classList.contains('nav__mobile-overlay')) {
+      mobileMenuRef.classList.remove("is-open");
+      body.style.overflow = "auto";
+    }
   });
 })();
