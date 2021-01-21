@@ -1,214 +1,215 @@
 .svg-lokalise-dims {
-	width: 130px;
-	height: 28px;
+  width: 130px;
+  height: 28px;
 
-	@media screen and (max-width: 981px) {
-		width: 90px;
-		height: 20px;
-	}
-	@media screen and (max-width: 768px) {
-		width: 110px;
-		height: 24px;
-	}
-	@media screen and (max-width: 438px) {
-		width: 90px;
-		height: 24px;
-	}
+  @media screen and (max-width: 981px) {
+    width: 90px;
+    height: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 110px;
+    height: 24px;
+  }
+  @media screen and (max-width: 438px) {
+    width: 90px;
+    height: 24px;
+  }
 }
 
 .logo {
-	margin-right: 51px;
-	align-self: baseline;
-	@media screen and (max-width: 981px) {
-		margin-right: 37px;
-	}
-	@media screen and (max-width: 767px) {
-		margin-right: 0;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
-	@media screen and (max-width: 520px) {
-		left: 15%;
-		transform: translateY(-50%);
-	}
-	@media screen and (max-width: 430px) {
-		position: absolute;
-		left: 20%;
-		transform: translateY(-50%);
-	}
+  margin-right: 51px;
+  align-self: baseline;
+  @media screen and (max-width: 981px) {
+    margin-right: 37px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (max-width: 520px) {
+    left: 15%;
+    transform: translateY(-50%);
+  }
+  @media screen and (max-width: 430px) {
+    position: absolute;
+    left: 20%;
+    transform: translateY(-50%);
+  }
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 100;
-	background-color: getColor(primary-light-color);
-	border-bottom: 1px solid #e5e5e5;
-	min-height: 95px;
-	padding: 2.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: getColor(primary-light-color);
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 95px;
+  padding: 2.5rem 0;
 
-	@media screen and (max-width: 981px) {
-		padding: 1.5rem 0;
-		min-height: $header-min-height;
-	}
+  @media screen and (max-width: 981px) {
+    padding: 1.5rem 0;
+    min-height: $header-min-height;
+  }
 }
 
 .header-content {
-	@include flexbox(space-between, center);
+  @include flexbox(space-between, center);
 }
 
 .burger-btn {
-	display: none;
-	@media screen and (max-width: 767px) {
-		display: block;
-		position: relative;
-		width: 30px;
-		height: 20px;
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
 
-		&::before,
-		&::after {
-			position: absolute;
-			content: '';
-			width: 100%;
-			height: 3px;
-			background-color: getColor(decorative-color);
-			left: 0;
-			transition: all $cubic;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-	}
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: getColor(decorative-color);
+      left: 0;
+      transition: all $cubic;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
 }
 
 .burger-btn span {
-	position: absolute;
-	width: 100%;
-	height: 3px;
-	background-color: getColor(decorative-color);
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	transition: all $cubic;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: getColor(decorative-color);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all $cubic;
 }
 .burger-btn.is-open span {
-	transform: scale(0);
+  transform: scale(0);
 }
 
 .burger-btn.is-open {
-	&::before {
-		transform: rotate(45deg);
-		top: 9px;
-	}
-	&::after {
-		transform: rotate(-45deg);
-		bottom: 9px;
-	}
+  &::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
 }
 
 .nav__mobile {
-	&-overlay {
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-		position: fixed;
-		z-index: 60;
-		top: -100%;
-		left: 0;
-		right: 0;
-		height: 100%;
-		background-color: rgba(0,0,0,0.35);
-	transition: all $cubic;
+  &-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    z-index: 60;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: all 450ms linear;
 
-		&.is-open {
-			opacity: 1;
-			pointer-events: all;
-			visibility: visible;
-		top: $header-min-height;
+    &.is-open {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      top: $header-min-height;
 
-			.nav__mobile {
-				transform: scale(1)
-			}
-		}
-	}
-	background-color: getColor(bg-accent);
-	text-align: center;
-	padding: 2rem 0;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.1), 0px 4px 4px rgba(0,0,0,0.08), 1px 4px 6px rgba(0,0,0,0.12);
-	transform: scale(0.8);
-	transition: all $cubic 100ms;
-
+      .nav__mobile {
+        transform: scale(1);
+        transition: all 450ms linear 200ms;
+      }
+    }
+  }
+  background-color: getColor(bg-accent);
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.08),
+    1px 4px 6px rgba(0, 0, 0, 0.12);
+  transform: scale(0.8);
+  transition: all 450ms linear;
 }
 
-
 .nav__list {
-	@include flexbox();
-	@media screen and (max-width: 767px) {
-		display: block;
-	}
+  @include flexbox();
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .nav__item {
-	margin-right: 42px;
-	@media screen and (max-width: 981px) {
-		margin-right: 27px;
-	}
-	@media screen and (max-width: 767px) {
-		margin: 0 0 7px 0;
-		&:last-child {
-			margin: 0;
-		}
-	}
+  margin-right: 42px;
+  @media screen and (max-width: 981px) {
+    margin-right: 27px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0 0 10px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .authorization .light_button,
 .authorization .accent_button {
-	height: 45px;
-	min-width: 120px;
-	@media screen and (max-width: 1010px) {
-		height: 40px;
-		padding: 0 1rem;
-		min-width: 110px;
-	}
-	@media screen and (max-width: 975px) {
-		height: 35px;
-		min-width: 100px;
-	}
-	@media (max-width: 810px) {
-		height: 30px;
-		min-width: 80px;
-	}
-	@media (max-width: 810px) {
-		height: 30px;
-		min-width: 80px;
-	}
-	@media (max-width: 438px) {
-		height: 30px;
-		min-width: 60px;
-	}
+  height: 45px;
+  min-width: 120px;
+  @media screen and (max-width: 1010px) {
+    height: 40px;
+    padding: 0 1rem;
+    min-width: 110px;
+  }
+  @media screen and (max-width: 975px) {
+    height: 35px;
+    min-width: 100px;
+  }
+  @media (max-width: 810px) {
+    height: 30px;
+    min-width: 80px;
+  }
+  @media (max-width: 810px) {
+    height: 30px;
+    min-width: 80px;
+  }
+  @media (max-width: 438px) {
+    height: 30px;
+    min-width: 60px;
+  }
 }
 
 .authorization .light_button {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .nav__link {
-	@include fontStyle(400, 1.5rem, 1.33, $primary-font);
-	color: getColor(primary-dark-color);
-	@media (max-width: 1000px) {
-		@include fontStyle(400, 1.3rem, 1.33, $primary-font);
-	}
-	@media (max-width: 767px) {
-		@include fontStyle(400, 2rem, 1.33, $primary-font);
-	}
+  @include fontStyle(400, 1.5rem, 1.33, $primary-font);
+  color: getColor(primary-dark-color);
+  @media (max-width: 1000px) {
+    @include fontStyle(400, 1.3rem, 1.33, $primary-font);
+  }
+  @media (max-width: 767px) {
+    @include fontStyle(400, 2rem, 1.33, $primary-font);
+  }
 
-	&:hover, &:focus {
-		color: getColor(decorative-color)
-	}
+  &:hover,
+  &:focus {
+    color: getColor(decorative-color);
+  }
 }

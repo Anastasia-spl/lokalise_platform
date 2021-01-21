@@ -1,0 +1,174 @@
+.localization {
+  background-color: getColor(bg-secondary);
+  padding: 120px 0 150px 0;
+  @media screen and (max-width: 767px) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 40px 0;
+  }
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    @include fontStyle(600, 5rem, 1.2, $primary-font);
+    @include adaptive-font(5, 2);
+    margin: 0 0 225px 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 160px 0;
+    }
+    @media screen and (max-width: 540px) {
+      margin: 0 0 120px 0;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -110px -55px;
+    @media screen and (max-width: 1000px) {
+      margin: -80px -20px;
+    }
+    @media screen and (max-width: 540px) {
+      margin: -60px -20px;
+    }
+    @media screen and (max-width: 430px) {
+      margin: -60px -10px;
+    }
+  }
+  &__item {
+    margin: 110px 55px;
+    flex-basis: calc((100% - 55px * 6) / 3);
+
+    @media screen and (max-width: 1000px) {
+      margin: 80px 20px;
+      flex-basis: calc((100% - 20px * 6) / 3);
+    }
+    @media screen and (max-width: 540px) {
+      flex-basis: calc((100% - 20px * 4) / 2);
+    }
+    @media screen and (max-width: 540px) {
+      margin: 60px 20px;
+    }
+    @media screen and (max-width: 430px) {
+      margin: 60px 10px;
+    }
+  }
+  &__sphere {
+    @include fontStyle(600, 2.5rem, 1.4, $primary-font);
+    @include adaptive-font(2.5, 1.2);
+    margin: 0 0 22px 0;
+    @media screen and (max-width: 540px) {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  &__text {
+    @include fontStyle(400, 1.8rem, 1.39, $primary-font);
+    @include adaptive-font(1.8, 1);
+    margin: 0;
+
+    &--underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+.localization__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -146px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: block;
+    height: 120px;
+    width: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 767px) {
+      height: 80px;
+      width: 120px;
+      top: -110px;
+    }
+    @media screen and (max-width: 540px) {
+      height: 60px;
+      width: 100px;
+      top: -80px;
+    }
+  }
+
+  &:nth-child(1) {
+    &::before {
+      background-image: url(../img/web-apps.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/web-apps@2x.png);
+      }
+    }
+  }
+  &:nth-child(2) {
+    &::before {
+      background-image: url(../img/mobile-apps.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/mobile-apps@2x.png);
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      background-image: url(../img/games.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/games@3x.png);
+      }
+    }
+  }
+  &:nth-child(4) {
+    &::before {
+      background-image: url(../img/documents.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/documents@2x.png);
+      }
+    }
+  }
+  &:nth-child(5) {
+    &::before {
+      background-image: url(../img/marketing-e-mails.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/marketing-e-mails@2x.png);
+      }
+    }
+  }
+  &:nth-child(6) {
+    &::before {
+      background-image: url(../img/iot.png);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../img/iot@2x.png);
+      }
+    }
+  }
+}
