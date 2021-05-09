@@ -3,3 +3,4 @@
 @@include('setBGImg.js');
 @@include('header-padding.js');
 @@include('menu-burger.js')
+@@include('footer-submenu.js')

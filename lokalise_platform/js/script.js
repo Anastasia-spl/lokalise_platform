@@ -267,3 +267,26 @@ document.body.style.paddingTop = "".concat(pageHeaderHeight, "px");
     }
   });
 })();
+
+(function () {
+  var productToggler = document.querySelector('[data-product-toggler]');
+  var supportToggler = document.querySelector('[data-support-toggler]');
+  var companyToggler = document.querySelector('[data-company-toggler]');
+  var legalToggler = document.querySelector('[data-legal-toggler]');
+  var productContainer = document.querySelector('[data-product-container]');
+  var supportContainer = document.querySelector('[data-support-container]');
+  var companyContainer = document.querySelector('[data-company-container]');
+  var legalContainer = document.querySelector('[data-legal-container]');
+  productToggler.addEventListener("click", function (event) {
+    productContainer.classList.toggle("is-open");
+  });
+  supportToggler.addEventListener("click", function (event) {
+    supportContainer.classList.toggle("is-open");
+  });
+  companyToggler.addEventListener("click", function (event) {
+    companyContainer.classList.toggle("is-open");
+  });
+  legalToggler.addEventListener("click", function (event) {
+    legalContainer.classList.toggle("is-open");
+  });
+})();

@@ -26,18 +26,19 @@
     "webp-converter": "^2.2.3"
   },
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnastasiaPolkovnikova/localise-practice.git"
+    "url": "git+https://github.com/AnastasiaPolkovnikova/lokalise_platform.git"
   },
   "author": "Anastasia Polkovnikova <anastasia_p_l@mail.ru>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AnastasiaPolkovnikova/localise-practice/issues"
+    "url": "https://github.com/AnastasiaPolkovnikova/lokalise_platform/issues"
   },
-  "homepage": "https://github.com/AnastasiaPolkovnikova/localise-practice#readme",
+  "homepage": "https://ваше_имя.github.io/lokalise_platform",
   "keywords": [],
   "description": "",
   "dependencies": {

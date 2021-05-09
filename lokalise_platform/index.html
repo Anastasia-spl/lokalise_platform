@@ -8,13 +8,13 @@
 </head>
 <body class="body">
     <header class="header">
-    <div class="container">
-        <div class="header-content">
+    <div class="header__container">
+        <div class="header__content">
             <div class="burger-btn" data-burger-btn aria-expanded="false" aria-controls="nav__mobile" aria-label="Mobile menu toggler"><span></span></div>
             <nav class="nav" >
                 <div class="nav__mobile-overlay" data-mobile-menu><div class="nav__mobile" ></div></div>
                 <ul class="list nav__list" data-da=".nav__mobile,767,first">
-                        <a href="" class="logo" data-da=".header-content,767,1">
+                        <a href="" class="logo" data-da=".header__content,767,1">
                             <svg class="svg-lokalise-dims">
                                 <use href="img/icons/icons.svg#lokalise"></use>
                             </svg>
@@ -32,6 +32,7 @@
             </div>
     </div>
 </header>
+    <main>
     <section class="hero">
     <div class="container hero__container">
         <div class="hero__wrapper">
@@ -186,35 +187,209 @@
     </div>
 </section>
     <section class="advantages">
-    <div class="container advantages__container">
-        <h2 class="advantages__title">Boost your localization team’s productivity tenfold</h2>
-        <ul class="advantages__list list">
-            <li class="advantages__item">
-                <h3 class="advantages__sphere">Managers</h3>
-                <p class="advantages__text">Our cloud software is trusted by many leading game developers around the world.
-                </p>
-                <a href="" class="advantages__link">Learn more</a>
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__sphere">Developers</h3>
-                <p class="advantages__text">Our cloud software is trusted by many leading game developers around the world.
-                </p>
-                <a href="" class="advantages__link">Learn more</a>
+    <div class="productivity">
+        <div class="container">
+            <h2 class="productivity__title">Boost your localization team’s productivity tenfold</h2>
+            <ul class="productivity__list list">
+                <li class="productivity__item">
+                    <h3 class="productivity__sphere">Managers</h3>
+                    <p class="productivity__text">Our cloud software is trusted by many leading game developers around the
+                        world.
+                    </p>
+                    <a href="" class="productivity__link">Learn more</a>
+                </li>
+                <li class="productivity__item">
+                    <h3 class="productivity__sphere">Developers</h3>
+                    <p class="productivity__text">Our cloud software is trusted by many leading game developers around the
+                        world.
+                    </p>
+                    <a href="" class="productivity__link">Learn more</a>
         
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__sphere">Translators</h3>
-                <p class="advantages__text">Our cloud software is trusted by many leading game developers around the world.
-                </p>
-        <a href="" class="advantages__link">Learn more</a>
-            </li>
-            
-        </ul>
+                </li>
+                <li class="productivity__item">
+                    <h3 class="productivity__sphere">Translators</h3>
+                    <p class="productivity__text">Our cloud software is trusted by many leading game developers around the
+                        world.
+                    </p>
+                    <a href="" class="productivity__link">Learn more</a>
+                </li>
+        
+            </ul>
+        </div>
+    </div>
+    <div class="quote">
+        <div class="container">
+            <div class="quote__wrapper">
+                <div class="quote__content">
+                    <blockquote class="quote__text">“Lokalise has turned a task we were dreading into an absolute pleasure. Great
+                        platform,
+                        intuitive UX, powerful API. The
+                        automatic text recognition for screenshots has been a lifesaver, and over-the-air updates are the icing on the
+                        cake.”</blockquote>
+                    <span class="quote__caption">Edward Cooper, Chief Mobile Officer</span>
+                    <svg class="quote__svg-Frame-dims">
+                        <use href="img/icons/icons.svg#Frame"></use>
+                    </svg>
+                </div>
+                <picture>
+                    <source srcset="img/cooper.webp 1x, img/cooper@2x.webp 2x, img/cooper@3x.webp 3x" type="image/webp" />
+                    <img class="quote__img" srcset="img/cooper.jpg 1x, img/cooper@2x.jpg 2x, img/cooper@3x.jpg 3x" src="img/cooper.jpg"
+                        alt="Photo of Edward Cooper, Chief Mobile Officer" width="310" />
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="estimates">
+        <div class="container estimates__container">
+            <div class="estimates__wrapper">
+                <picture>
+                    <source srcset="img/cake.webp 1x, img/cake@2x.webp 2x, img/cake@3x.webp 3x"
+                        type="image/webp" />
+                    <img class="estimates__img"
+                        srcset="img/cake.png 1x, img/cake@2x.png 2x, img/cake@3x.png 3x"
+                        src="img/cake.png" alt="Cake" width="176" />
+                </picture>
+                <p class="estimates__text" data-da=".estimates__container,767,first">The most-loved translation management software</p>
+                <div class="estimates__g2 g2">
+                    <svg class="svg-g2-dims">
+                        <use href="img/icons/icons.svg#g2"></use>
+                    </svg>
+                    <svg class="svg-stars-evaluate-dims">
+                        <use href="img/icons/icons.svg#stars-evaluate"></use>
+                    </svg>
+                    
+                    <span class="g2__capture">USERS LOVE US</span>
+                </div>
+                <div class="estimates__capterra capterra">
+                    <svg class="svg-capterra-dims">
+                        <use href="img/icons/icons.svg#capterra"></use>
+                    </svg>
+                    <svg class="svg-stars-evaluate-dims">
+                        <use href="img/icons/icons.svg#stars-evaluate"></use>
+                    </svg>
+                    <span class="capterra__capture">HIGHEST RATED</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="integrations">
+        <div class="container integrations__container">
+            <b class="integrations__title">Integrate Lokalise with your work tools</b>
+            <p class="integrations__subtitle">Automate processes, eliminate routine tasks, and track progress with ease.</p>
+            <picture>
+                <source srcset="img/integrate-with-work-tools.webp 1x, img/integrate-with-work-tools@2x.webp 2x, img/integrate-with-work-tools@3x.webp 3x" type="image/webp" />
+                <img class="integrations__img" srcset="img/integrate-with-work-tools.png 1x, img/integrate-with-work-tools@2x.png 2x, img/integrate-with-work-tools@3x.png 3x" src="img/integrate-with-work-tools.png"
+                    alt="Various work tools" width="1023" />
+            </picture>
+            <button class="accent_button integrations__btn">See all integrations</button>
+        </div>
+    </div>
+    <div class="try-free">
+        <div class="container try-free__container">
+            <b class="try-free__title">Localization made easy. <br> Why wait?</b>
+            <b class="try-free__subtitle">Try for free or let us show you how it works.</b>
+            <button class="accent_button try-free__btn">Try it free</button>
+        </div>
     </div>
 </section>
+    </main>
+    <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__info-wrapper">
+        <div class="footer__column case-studies">
+            <h2 class="case-studies__title">Case Studies</h2>
+            <picture>
+                <source srcset="img/footer.webp 1x, img/footer@2x.webp 2x, img/footer@3x.webp 3x" type="image/webp" />
+                <img class="case-studies__img" srcset="img/footer.jpg 1x, img/footer@2x.jpg 2x, img/footer@3x.jpg 3x"
+                    src="img/footer.jpg" alt="Photo of Edward Cooper, Chief Mobile Officer" width="310" />
+            </picture>
+            <svg class="case-studies__specialized">
+                <use href="img/icons/icons.svg#specialized"></use>
+            </svg>
+            <p class="case-studies__text">Riding towards global success with a 100% teammate enthusiasm</p>
+            <a class="case-studies__link link" href="/">Read more</a>
+        </div>
+        <div class="footer__column product">
+            <div class="footer__column-title-wrapper" data-product-toggler><h2 class="footer__column-title">Product</h2>
+            <div class="arrow-more"></div></div>
+            
+            <ul class="list product__list" data-da=".mobile-list.product , 767, first">
+                <li class="footer__column-item product__item"> <a class="link footer__column-link" href="/">For developers</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">For managers</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">For translators</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">For designers</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">Integrations</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">Security</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">Pricing</a></li>
+                <li class="footer__column-item product__item"><a class="link footer__column-link" href="/">Automations</a></li>
+            </ul>
+            <div class="mobile-list product" data-product-container></div>
+        </div>
+        <div class="footer__column support">
+            <div class="footer__column-title-wrapper" data-support-toggler ><h2 class="footer__column-title">Support</h2>
+            <div class="arrow-more"></div></div>
+            
+            <ul class="support__list list" data-da=".mobile-list.support, 767, first">
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">Contact</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">Documentation</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">Status</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">Product Updates</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">CLI Tool</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">API Reference</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">iOS and Android SDK</a></li>
+                <li class="footer__column-item support__item"><a class="link footer__column-link" href="/">Supported File Formats</a></li>
+            </ul>
+            <div class="mobile-list support" data-support-container></div>
 
+        </div>
+        <div class="footer__column company">
+            <div class="footer__column-title-wrapper" data-company-toggler><h2 class="footer__column-title">Company</h2>
+            <div class="arrow-more"></div></div>
+            
+            <ul class="list company__list" data-da=".mobile-list.company, 767, first">
+                <li class="footer__column-item company__item"><a class="link footer__column-link" href="/">About</a></li>
+                <li class="footer__column-item company__item"><a class="link footer__column-link" href="/">Blog</a></li>
+                <li class="footer__column-item company__item"><a class="link footer__column-link" href="/">Careers | We`re Hiring</a></li>
+                <li class="footer__column-item company__item"><a class="link footer__column-link" href="/">Case Studies</a></li>
+                <li class="footer__column-item company__item"><a class="link footer__column-link" href="/">Media Kit</a></li>
+            </ul>
+            <div class="mobile-list company" data-company-container></div>
+
+        </div>
+        <div class="footer__column legal">
+            <div class="footer__column-title-wrapper" data-legal-toggler><h2 class="footer__column-title">Legal</h2>
+            <div class="arrow-more"></div></div>
+            
+            <ul class="list legal__list" data-da=".mobile-list.legal, 767, first">
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">Terms of Service</a></li>
+                <li class="footer__column-item egal__item"><a class="link footer__column-link" href="/">Privacy Policy</a></li>
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">Cookie Policy</a></li>
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">Privacy Shield</a></li>
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">DPA</a></li>
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">List of Sub-processors</a>
+                </li>
+                <li class="footer__column-item legal__item"><a class="link footer__column-link" href="/">Candidates Privacy Notice</a>
+                </li>
+            </ul>
+            <div class="mobile-list legal" data-legal-container></div>
+
+        </div>
+      </div>
+
+       <div class="footer__ending ending">
+           <div class="ending__separator">
+                <svg class="ending__logo svg-lokalise-text-dims">
+                    <use href="img/icons/icons.svg#lokalise-text"></use>
+                </svg>
+                <p class="ending__text">Localization workflow for your web and mobile apps, games and digital content.
+                </p>
+           </div>
+           <span class="ending__copyright">&copy2001-2020<br>All rights reserved.
+           </span>
+       </div>
+    </div>
+</footer>
 
     <script src="js/script.min.js"></script>
-    <script> console.log(window.devicePixelRatio)    </script>
 </body>
 </html>

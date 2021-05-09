@@ -1,12 +1,16 @@
 .localization {
   background-color: getColor(bg-secondary);
-  padding: 120px 0 150px 0;
+  padding: 12rem 0 15rem 0;
+  @media screen and (max-width: 1200px) {
+    padding: 8rem 0;
+  }
   @media screen and (max-width: 767px) {
-    padding: 60px 0;
+    padding: 6rem 0;
   }
   @media screen and (max-width: 500px) {
-    padding: 40px 0;
+    padding: 4rem 0;
   }
+
   &__container {
     text-align: center;
   }
@@ -49,13 +53,12 @@
       flex-basis: calc((100% - 20px * 6) / 3);
     }
     @media screen and (max-width: 540px) {
-      flex-basis: calc((100% - 20px * 4) / 2);
-    }
-    @media screen and (max-width: 540px) {
       margin: 60px 20px;
+      flex-basis: calc((100% - 20px * 4) / 2);
     }
     @media screen and (max-width: 430px) {
       margin: 60px 10px;
+      flex-basis: calc((100% - 10px * 4) / 2);
     }
   }
   &__sphere {

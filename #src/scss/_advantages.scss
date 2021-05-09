@@ -1,13 +1,10 @@
-.advantages {
-  padding: 154px 0 100px 0;
+.productivity {
+  padding: 15.4rem 0 10rem 0;
   @media screen and (max-width: 767px) {
-    padding: 60px 0;
+    padding: 6rem 0;
   }
   @media screen and (max-width: 500px) {
-    padding: 40px 0;
-  }
-  &__container {
-    // text-align: center;
+    padding: 4rem 0;
   }
 
   &__title {
@@ -68,10 +65,19 @@
 
   &__link {
     color: getColor(primary-dark-color);
+    @include fontStyle(400, 2rem, 1.5, $primary-font);
+    @include adaptive-font(2, 1.2);
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: getColor(decorative-color);
+      font-weight: 600;
+    }
   }
 }
 
-.advantages__item {
+.productivity__item {
   position: relative;
 
   &::before {
@@ -129,6 +135,315 @@
         screen and (min-resolution: 2dppx) {
         background-image: url(../img/translators@3x.png);
       }
+    }
+  }
+}
+
+.quote {
+  background-color: #c9e8f2;
+  padding: 6.4rem 0 15rem 0;
+  @media screen and (max-width: 1200px) {
+    padding: 8rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 6rem 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 4rem 0;
+  }
+
+  &__wrapper {
+    @include flexbox(space-between, flex-start);
+  }
+
+  &__content {
+    max-width: 890px;
+    margin-right: 60px;
+
+    @media screen and (max-width: 767px) {
+      margin-right: 0px;
+    }
+  }
+
+  &__text {
+    @include fontStyle(400, 3rem, 1.33, $primary-font);
+    @include adaptive-font(3, 1.1);
+    margin: 0 0 23px 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__caption {
+    display: block;
+    @include fontStyle(400, 1.5rem, 1.67, $secondary-font);
+    @include adaptive-font(1.5, 1);
+    margin: 0 0 7px 0;
+  }
+
+  &__svg-Frame-dims {
+    max-width: 112px;
+    max-height: 25px;
+    @media screen and (max-width: 767px) {
+      max-width: 90px;
+      max-height: 20px;
+    }
+    @media screen and (max-width: 550px) {
+      max-width: 60px;
+      max-height: 15px;
+    }
+  }
+
+  &__img {
+    min-width: 20vw;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      min-width: 25vw;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.estimates {
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+
+  padding: 9rem 0;
+  @media screen and (max-width: 1200px) {
+    padding: 8rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 6rem 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 4rem 0;
+  }
+  background-color: #dabc98;
+
+  &__wrapper {
+    @include flexbox();
+    @media screen and (max-width: 767px) {
+      justify-content: flex-start;
+    }
+  }
+
+  picture {
+    margin-right: 67px;
+  }
+
+  &__img {
+    max-width: 176px;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 130px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include fontStyle(600, 3.5rem, 1.43, $primary-font);
+    @include adaptive-font(3.5, 1.4);
+    margin: 0 195px 0 0;
+
+    @media screen and (max-width: 1200px) {
+      margin: 0 130px 0 0;
+    }
+    @media screen and (max-width: 767px) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  &__g2 {
+    margin-right: 70px;
+    @include flexbox(center, flex-start);
+    flex-direction: column;
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 120px;
+    }
+  }
+
+  &__capterra {
+    @include flexbox(center, flex-start);
+    flex-direction: column;
+
+    @media screen and (max-width: 767px) {
+      max-width: 120px;
+    }
+  }
+}
+
+.g2 {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -71px;
+    width: 1px;
+    height: 168px;
+    background-color: getColor(primary-dark-color);
+
+    @media screen and (max-width: 767px) {
+      left: 130px;
+      height: 140px;
+    }
+  }
+
+  .svg-g2-dims {
+    margin-bottom: 20px;
+  }
+  .svg-stars-evaluate-dims {
+    margin-bottom: 14px;
+  }
+
+  &__capture {
+    text-transform: uppercase;
+    @include fontStyle(400, 1.5rem, 1.67, $primary-font, 0.75px);
+    @include adaptive-font(1.5, 1);
+  }
+}
+
+.capterra {
+  .svg-capterra-dims {
+    margin-bottom: 20px;
+  }
+  .svg-stars-evaluate-dims {
+    margin-bottom: 14px;
+  }
+  &__capture {
+    text-transform: uppercase;
+    @include fontStyle(400, 1.5rem, 1.67, $primary-font, 0.75px);
+    @include adaptive-font(1.5, 1);
+  }
+}
+
+.integrations {
+  padding: 16.5rem 0;
+  @media screen and (max-width: 1200px) {
+    padding: 8rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 6rem 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 4rem 0;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    display: inline-block;
+    max-width: 790px;
+    @include fontStyle(600, 6.5rem, 1.15, $primary-font);
+    @include adaptive-font(6.5, 2.5);
+    margin: 0;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    max-width: 540px;
+    @include fontStyle(400, 2.5rem, 1.2, $primary-font);
+    @include adaptive-font(2.5, 1.5);
+    margin: 0 0 25px 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__img {
+    margin: 0 auto 32px auto;
+  }
+
+  &__btn {
+    height: 60px;
+    min-width: 193px;
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1), 0 3px 4px rgba(0, 0, 0, 0.08),
+        0 4px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    @media screen and (max-width: 767px) {
+      min-width: 140px;
+      height: 50px;
+    }
+    @media screen and (max-width: 470px) {
+      min-width: 120px;
+      height: 40px;
+    }
+  }
+}
+
+.try-free {
+  background-color: getColor(bg-accent);
+  padding: 12rem 0 16rem 0;
+  @media screen and (max-width: 1200px) {
+    padding: 8rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 6rem 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 4rem 0;
+  }
+
+  &__container {
+    @include flexbox();
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    @include fontStyle(600, 6.5rem, 1.15, $primary-font);
+    @include adaptive-font(6.5, 2.5);
+    margin: 0 0 30px 0;
+  }
+
+  &__subtitle {
+    @include fontStyle(400, 2rem, 1.5, $primary-font);
+    @include adaptive-font(2, 1.2);
+    margin: 0 0 54px 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__btn {
+    height: 60px;
+    min-width: 160px;
+    background-color: getColor(primary-dark-color);
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1), 0 3px 4px rgba(0, 0, 0, 0.08),
+        0 4px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    @media screen and (max-width: 767px) {
+      min-width: 140px;
+      height: 50px;
+    }
+    @media screen and (max-width: 470px) {
+      min-width: 120px;
+      height: 40px;
     }
   }
 }
