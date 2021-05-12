@@ -1,15 +1,18 @@
 <header class="header">
     <div class="header__container">
         <div class="header__content">
-            <div class="burger-btn" data-burger-btn aria-expanded="false" aria-controls="nav__mobile" aria-label="Mobile menu toggler"><span></span></div>
+            <div class="burger-btn" data-burger-btn aria-expanded="false" aria-controls="nav__mobile"
+                aria-label="Mobile menu toggler" role="button"><span></span></div>
             <nav class="nav" >
-                <div class="nav__mobile-overlay" data-mobile-menu><div class="nav__mobile" ></div></div>
+                <div class="nav__mobile-overlay" data-mobile-menu><div class="nav__mobile" id="nav__mobile" ></div></div>
                 <ul class="list nav__list" data-da=".nav__mobile,767,first">
+                    <li>
                         <a href="" class="logo" data-da=".header__content,767,1">
                             <svg class="svg-lokalise-dims">
                                 <use href="img/icons/icons.svg#lokalise"></use>
                             </svg>
                         </a>
+                    </li>
                     <li class="nav__item"> <a href="" class="nav__link link">Product</a></li>
                     <li class="nav__item"><a href="" class="nav__link link">Features</a></li>
                     <li class="nav__item"><a href="" class="nav__link link">Pricing</a></li>
